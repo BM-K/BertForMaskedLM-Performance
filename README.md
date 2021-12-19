@@ -18,6 +18,7 @@ python train.py --MLM True --Finetune False --max_len 512 --masking_ratio 0.15
 ```
 # Fist step: Fine-tuning (Sentiment Classification)
 python train.py --MLM False --Finetune False --max_len 512 --batch_size 16 --masking_ratio 0.15 --train True --test True
+
 # Second step: MLM
 python train.py --MLM True --Finetune True --max_len 512 --batch_size 16 --masking_ratio 0.15
 ```
