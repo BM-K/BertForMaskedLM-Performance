@@ -100,7 +100,7 @@ class ModelDataLoader(Dataset):
 
         mask = torch.zeros(start_padding_idx)
 
-        mask_num = int(start_padding_idx * 0.15)
+        mask_num = int(start_padding_idx * self.masking_ratio)
         random_list = [random.randint(0, start_padding_idx-2) for r in range(mask_num)]
 
         for idx in random_list:
